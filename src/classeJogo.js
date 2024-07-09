@@ -5,14 +5,22 @@ class hero{
         this.type = type
     }
 
-    attack(type){
+    attack(){
         let typeOfAttack = ["magia", "espada", "artes marciais", "shuriken"]
-        if (type == "mago"){
-            console.log(`O ${type} atacou usando ${typeOfAttack[0]}`)
+        if(this.type === "mago"){
+            console.log(`O ${this.type} atacou usando ${typeOfAttack[0]}`)
+        }else if(this.type === "guerreiro"){
+            console.log(`O ${this.type} atacou usando ${typeOfAttack[1]}`)
+        }else if(this.type === "monge"){
+            console.log(`O ${this.type} atacou usando ${typeOfAttack[2]}`)
+        }else if(this.type === "ninja"){
+            console.log(`O ${this.type} atacou usando ${typeOfAttack[3]}`)
+        }else{
+            console.log("O tipo do guerreiro não é válido")
         }
     }
 }
 
-let guerreiro = new hero("Yuri", 24, "mago")
+let guerreiro = new hero("Yuri", 24, "ninja")
 
 guerreiro.attack()
